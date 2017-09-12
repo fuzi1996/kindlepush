@@ -21,8 +21,6 @@ class Fileor():
         mt = []
         completepath = []
         path,filelist,file_size_sum = Fileor.file_walk(self)
-        print("文件数目为:" + str(len(filelist)))
-        print("所选择文件大小为:"+str(file_size_sum))
         if file_size_sum >= 25000000:
             print("所选择文件总大小不得大于25M\n")
             print("请关闭该窗口，减少文件数量，以满足要求")

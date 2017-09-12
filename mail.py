@@ -3,7 +3,6 @@ from email.mime.base import MIMEBase
 from email import encoders
 from email.header import Header
 from email.utils import parseaddr,formataddr
-import smtplib
 from file import Fileor
 
 def input_template(s):
@@ -35,6 +34,10 @@ class Mail():
         self.port = input_template("邮箱SMTP端口(ssl):")
         self.bookpath = input_template("存储书籍目录:")
 
+
+    def returninfo(self):
+        return self.smtp_server, self.port, self.from_addr, self.password, self.to_address_list
+
     def printvalue(self):
         print_tempalte("发送方邮箱账号",self.from_addr)
         print_tempalte("发送方密码",self.password)
@@ -61,26 +64,18 @@ class Mail():
                 # 添加到MIMEMultipart:
                 msg.attach(mime)
         return msg
+    def returnf(self):
+        return self.sendmessage().as_string()
 
-    def loginout(self):
-        print("正在登陆")
-        server = smtplib.SMTP(self.smtp_server,self.port)
-        print("服务器登陆成功")
-        print("正在建立传输")
-        server.starttls()
-        server.set_debuglevel(1)
-        print("用户正在登陆")
-        server.login(self.from_addr,self.password)
-        print("用户登陆成功")
-        server.sendmail(self.from_addr,self.to_address_list,Mail.sendmessage(self).as_string())
-        print("传输完成")
-        print("正在登出服务器")
-        server.quit()
-        print("服务器成功退出")
 
-if __name__ == "__main__":
-    mail = Mail()
-    mail.loginout()
+
+
+# if __name__ == "__main__":
+#     mail = Mail()
+#     smtp_server, port, from_addr, password, to_address_list = mail.returninfo()
+#     server = Server(smtp_server, port, from_addr, password, to_address_list)
+#     server.login()
+#     server.logout()
 
 
 
