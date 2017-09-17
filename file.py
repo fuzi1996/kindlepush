@@ -35,11 +35,6 @@ class Fileor():
             return st,mt,completepath
 
 
-# if __name__ == "__main__":
-#     file = Fileor("F:\新建文件夹")
-#     booknamelist, suffixnamelist, copletepathlist = file.otfile()
-#     for bookname, suffixname, copletepath in zip(booknamelist,suffixnamelist,copletepathlist):
-#         print(bookname,suffixname,copletepath)
 
 
 

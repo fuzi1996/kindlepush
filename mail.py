@@ -5,9 +5,6 @@ from email.header import Header
 from email.utils import parseaddr,formataddr
 from file import Fileor
 
-def input_template(s):
-    return input("请输入" + s)
-
 def print_tempalte(s1,s2):
     return print("您输入的" + s1 + "是" + s2)
 
@@ -17,34 +14,24 @@ def _format_addr(s):
 
 
 class Mail():
-    def __init__(self):
-        self.from_addr = input_template("发送方邮箱账号:")
-        self.password = input_template("发送方密码:")
-        yes_or_no = True
-        self.to_address_list = []
-        while yes_or_no:
-            to_addr = input_template("接收方邮箱账号:")
-            self.to_address_list.append(to_addr)
-            yes_or_no = input("是否继续输入(y/n):")
-            if yes_or_no == ("y"or"yes"):
-                pass
-            else:
-                yes_or_no = False
-        self.smtp_server = input_template("邮件服务器地址:")
-        self.port = input_template("邮箱SMTP端口(ssl):")
-        self.bookpath = input_template("存储书籍目录:")
+    def __init__(self,from_addr,password,to_address_list,smtp_server,port,bookpath):
+        self.from_addr = from_addr
+        self.password = password
+        self.to_address_list = to_address_list
+        self.smtp_server = smtp_server
+        self.port = port
+        self.bookpath = bookpath
 
-
-    def returninfo(self):
-        return self.smtp_server, self.port, self.from_addr, self.password, self.to_address_list
 
     def printvalue(self):
+        print("请确认:")
         print_tempalte("发送方邮箱账号",self.from_addr)
         print_tempalte("发送方密码",self.password)
         print_tempalte("接收方邮箱账号",str(self.to_address_list).strip("[]"))
         print_tempalte("邮件服务器地址",self.smtp_server)
         print_tempalte("邮箱SMTP端口(ssl)",self.port)
         print_tempalte("存储书籍目录", self.bookpath)
+
 
     def sendmessage(self):
         msg = MIMEMultipart()
