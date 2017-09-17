@@ -20,11 +20,19 @@ PNG (.PNG)
 BMP (.BMP)
 PDF (.PDF)
 <br/>
+<br/>
+<br/>
 ![login](https://github.com/fuzi1996/pictbed/blob/master/01.JPG)<br/>
+<br/>
 点击“管理我的内容和设备”<br/>
+<br/>
 点击选择“设置”<br/>
+<br/>
 ![setting](https://github.com/fuzi1996/pictbed/blob/master/04.JPG)<br/>
-这里找到以kindle.cn结尾的邮箱地址就是你的接收邮箱<br/>
+<br/>
+这里找到以kindle.cn结尾的邮箱就是你的收件邮箱
+<br/>
 ！[prootected](https://github.com/fuzi1996/pictbed/blob/master/05.JPG)<br/>
-这里要注意,你在发件前应该使用已认可的电子邮箱作为发件邮箱，在这里可以添加<br/>
+<br/>
+这里要注意,你在发件前应该使用已认可的电子邮箱作为发件邮箱，在这里可以添加
 
