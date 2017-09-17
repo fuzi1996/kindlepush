@@ -32,7 +32,7 @@ PDF (.PDF)
 <br/>
 这里找到以kindle.cn结尾的邮箱就是你的收件邮箱
 <br/>
-！[prootected](https://github.com/fuzi1996/pictbed/blob/master/05.JPG)<br/>
+![prootected](https://github.com/fuzi1996/pictbed/blob/master/05.JPG)<br/>
 <br/>
 这里要注意,你在发件前应该使用已认可的电子邮箱作为发件邮箱，在这里可以添加
 
