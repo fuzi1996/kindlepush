@@ -3,6 +3,8 @@
 下载全部程序<br/>
 运行<br/>
 <code>python main.py</code><br/>
+端口号为启用ssl协议的端口号<br/>
+推荐使用微软outlook邮箱，QQ邮箱密码是其独立授权码，需要单独申请。<br/>
 <br/>
 程序上传时会有些慢，耐心等待<br/>
 <br/>
